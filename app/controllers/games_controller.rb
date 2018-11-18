@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   # Add your GamesController code here
+  before_action :set_game, only [:show, :update]
   def Create
     game = Game.Create(game_params)
     render json: game, status: 201
