@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   # Add your GamesController code here
   def Create
     @game = Game.Create(game_params)
-    render @game, status 201
+    render @game, status: 201
   end
 
   private
