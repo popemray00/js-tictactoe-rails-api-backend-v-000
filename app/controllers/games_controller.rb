@@ -8,6 +8,6 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:state)
+    params.require(:game).permit(state: [])
   end
 end
