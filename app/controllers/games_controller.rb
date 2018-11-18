@@ -7,6 +7,10 @@ class GamesController < ApplicationController
     render json: games
   end
 
+  def show
+    render json: @game
+  end
+
   def Create
     game = Game.Create(game_params)
     render json: game, status: 201
